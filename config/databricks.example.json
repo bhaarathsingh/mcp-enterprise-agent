@@ -1,0 +1,19 @@
+{
+  "servers": [
+    {
+      "name": "knowledge",
+      "url": "https://YOUR-WORKSPACE.cloud.databricks.com/api/2.0/mcp/ai-search/YOUR_CATALOG/YOUR_SCHEMA/YOUR_INDEX",
+      "allowed_tools": []
+    },
+    {
+      "name": "analytics",
+      "url": "https://YOUR-WORKSPACE.cloud.databricks.com/api/2.0/mcp/genie/YOUR_GENIE_SPACE_ID",
+      "allowed_tools": []
+    },
+    {
+      "name": "functions",
+      "url": "https://YOUR-WORKSPACE.cloud.databricks.com/api/2.0/mcp/functions/YOUR_CATALOG/YOUR_SCHEMA/YOUR_FUNCTION",
+      "allowed_tools": []
+    }
+  ]
+}

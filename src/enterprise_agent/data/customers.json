@@ -1,0 +1,4 @@
+[
+  {"id":"C-001","company":"Example Orchard","region":"East","email":"demo@example.invalid","tier":"standard"},
+  {"id":"C-002","company":"Example Harbor","region":"West","email":"demo@example.invalid","tier":"premium"}
+]

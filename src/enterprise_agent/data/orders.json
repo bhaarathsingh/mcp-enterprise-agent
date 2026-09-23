@@ -1,0 +1,9 @@
+[
+  {"id":"O-101","month":"2026-01","region":"East","revenue_cents":120000,"cost_cents":70000},
+  {"id":"O-102","month":"2026-01","region":"East","revenue_cents":80000,"cost_cents":50000},
+  {"id":"O-103","month":"2026-02","region":"East","revenue_cents":150000,"cost_cents":90000},
+  {"id":"O-104","month":"2026-03","region":"East","revenue_cents":50000,"cost_cents":30000},
+  {"id":"O-105","month":"2026-01","region":"West","revenue_cents":200000,"cost_cents":100000},
+  {"id":"O-106","month":"2026-02","region":"West","revenue_cents":100000,"cost_cents":60000},
+  {"id":"O-107","month":"2026-03","region":"West","revenue_cents":300000,"cost_cents":180000}
+]

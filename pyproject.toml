@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-enterprise-agent"
+version = "0.1.0"
+description = "A governed MCP tool-calling agent with a local lab and Databricks adapters"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["mcp>=1.30,<2", "langgraph>=1.2,<2", "langchain-core>=1.4,<2", "jsonschema>=4.20,<5"]
+
+[project.optional-dependencies]
+dev = ["pytest>=9,<10", "pytest-asyncio>=1,<2", "ruff>=0.16,<1"]
+databricks = [
+  "databricks-mcp>=0.9.2,<1",
+  "databricks-langchain>=0.20,<1",
+  "mlflow>=3.1,<4",
+  # Unity Catalog's current SDK requires typing-extensions <=4.15.
+  # AnyIO 4.15+ requires >=4.16 on Python <3.15; constrain the compatible line.
+  "anyio>=4.5,<4.12",
+  "typing-extensions==4.15.0",
+]
+
+[project.scripts]
+enterprise-agent = "enterprise_agent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+enterprise_agent = ["data/*.json"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
